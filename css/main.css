@@ -1,0 +1,43 @@
+.maincomponent
+{
+  margin:0 auto;
+  width:500px;
+}
+
+
+.banker
+{
+  float: left;
+  width: 45%;
+}
+
+.customer
+{
+  float: right;
+  width: 45%;
+}
+
+.bank
+{
+  font-size: 40px;;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+}
+
+.cust
+{
+  font-size: 40px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+}
+
+.line
+{
+  width:2px;
+  background-color: black;
+  height: 50px;
+  float: left;
+  height: 645px;
+}
