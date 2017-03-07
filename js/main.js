@@ -68,7 +68,8 @@ function Banker(Notes_2000,Notes_500,Notes_100,current_Amount,Max_limit ){
           logs.appRow();
        document.getElementById("S_text4").value=Amount;
           $("#S_buttonAdd").attr("disabled",true)
-
+          window.bank= bankers;
+                   window.logs=logs;
       }
       function maxLimit(){
 
@@ -77,3 +78,55 @@ function Banker(Notes_2000,Notes_500,Notes_100,current_Amount,Max_limit ){
           $("#maxLim").text(max);
 
       }
+
+
+
+
+
+// for withdraw
+
+function withdraw(){
+   var bank= window.bank;
+   var log= window.logs;
+   var value=$("#amount").val();
+   console.log(value)
+   if((value>log.Left_amount||value>bank.Max_limit)){
+      console.log(value>log.Left_amount)
+      console.log(value>bank.Max_limit)
+         console.log(bank.Max_limit)
+       alert(value)
+     document.getElementById('status').value = "Amount is greater than Left Amount or Maximum Limit";
+   }
+   console.log(value)
+   var Notes_2000Req=parseInt(value / 2000);
+   console.log(Notes_2000Req);
+   var rem=value-Notes_2000Req*2000;
+   console.log(rem)
+   var Notes_500Req=parseInt(rem/500);
+   rem=rem-Notes_500Req*500;
+       console.log(rem)
+   var Notes_100req=parseInt(rem/100);
+   console.log(Notes_2000Req+" "+Notes_500Req+" "+ Notes_100req)
+
+   if(Notes_2000Req<=logs.Notes_2000&&Notes_500Req<=logs.Notes_500&&Notes_100req<=logs.Notes_100){
+     document.getElementById('status').value = "Withraw Amount Successfully";
+   }
+   /*if(Notes_2000Req>logs.Notes_2000){
+       if(logs.Notes_500*500>=Notes_2000Req*2000||logs.Notes_100*100>=Notes_2000Req*2000){
+           document.getElementById('status').value = "Withraw Amount Successfully";
+           Notes_2000Req=
+       }
+   }*/
+   var    leftAmount=log.Left_amount-value;
+ var Notes2000=log.Notes_2000-Notes_2000Req;
+  var Notes500=log.Notes_500-Notes_500Req;
+  var Notes100=log.Notes_100-Notes_100req;
+  var LOG=new Logs(value,Notes2000,Notes500,Notes100,leftAmount,"Debit")
+ // LOG.Amount=value;
+LOG.appRow();
+   console.log(LOG)
+
+//if()
+   console.log(window.bank)
+
+}
