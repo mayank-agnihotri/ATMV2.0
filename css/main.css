@@ -5,6 +5,11 @@
 }
 
 
+.components
+{
+  height: 300px;
+}
+
 .banker
 {
   float: left;
@@ -39,7 +44,7 @@
   background-color: black;
   height: 50px;
   float: left;
-  height: 645px;
+  height: 300px;
 }
 
 
@@ -66,7 +71,8 @@ table, th, td {
 #status{
     border-style: solid;
     border-width: medium;
-    height: 30px;
+    height: 45px;
+    width: 401px;
 }
 #amount{
     float: inherit
@@ -125,4 +131,11 @@ input[type="text"]{
 .value
 {
   margin-left: 5px;
+}
+
+
+
+tr th
+{
+  width: 250px;
 }

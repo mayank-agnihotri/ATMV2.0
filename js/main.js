@@ -50,6 +50,7 @@ function Banker(Notes_2000,Notes_500,Notes_100,current_Amount,Max_limit ){
    cell3.innerHTML=this.Notes_100;
    cell4.innerHTML=this.Left_amount;
    cell5.innerHTML=this.Operation;
+   cell5.bgColor = "green";
 
 
 }
@@ -76,4 +77,3 @@ function Banker(Notes_2000,Notes_500,Notes_100,current_Amount,Max_limit ){
           $("#maxLim").text(max);
 
       }
-     
