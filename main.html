@@ -21,9 +21,9 @@
 
           <div id="S_sub1">
           <p id="S_para1">Enter the amount of cash to be deposited</p>
-          <input type="textbox" placeholder="2000"/ id="S_text1">2000<br>
-          <input type="textbox" placeholder="500"/ id="S_text2">500<br>
-          <input type="textbox" placeholder="100"/ id="S_text3">100<br>
+          <input type="textbox" placeholder="2000" id="S_text1"><span class="value">2000</span><br>
+          <input type="textbox" placeholder="500" id="S_text2"><span class="value">500</span><br>
+          <input type="textbox" placeholder="100" id="S_text3"><span class="value">100</span><br>
           <br>
           <button placeholder="2000"/ id="S_buttonAdd">Add</button><br>
 
@@ -45,12 +45,12 @@
                   <th>credit/debit</th>
               </tr>
               <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                   <td></td>
+                  <td>Debit</td>
+                  <td>10</td>
+                  <td>5</td>
+                  <td>7</td>
+                  <td>8</td>
+                   <td>2400</td>
               </tr>
           </table>
           <div id="colorGreen"> </div>deposited
@@ -81,14 +81,19 @@
             <li>Enter Amount
               <input type="number" id="amount" min="0" onblur="validateAmount()">
             </li>
-            <li id="submit">
-               <input type="submit" id="sub">
-            </li>
-            <li>
-              <h3>Status :</h3>
-              <h3 id="status"></h3>
-            </li>
+
+            <div class="subm">
+              <input type="submit" class="submit" value="SUBMIT">
+            </div>
+
           </ul>
+
+
+          <div class="status">
+            <label>STATUS</label>
+            <input type="text" id="status">
+
+          </div>
 
 
 

@@ -1,12 +1,16 @@
 function validateAmount(){
+
     var amount=$("#amount").val();
-    alert(amount%100)
+
+
 
     if(amount<0||(amount%100!=0)){
-        $("#status").text("Please enter valid amount");
+      //alert(amount);
+        // $("#status").innerHTML("Please enter valid amount");
+        document.getElementById('status').value = "Please enter valid amount";
     }
     else{
-
-         $("#status").text("Submit the amount");
+      document.getElementById('status').value = "Submit the amount";
+        //  $("#status").innerHTML("Submit the amount");
     }
 }
