@@ -1,7 +1,7 @@
 .maincomponent
 {
   margin:0 auto;
-  width:500px;
+  width:900px;
 }
 
 
@@ -40,4 +40,51 @@
   height: 50px;
   float: left;
   height: 645px;
+}
+
+
+
+table, th, td {
+   border: 1px solid black;
+}
+
+#colorGreen{
+   border: 1px;
+   background-color: green;
+   width: 20px;
+
+
+}
+
+#colorRed{
+   border:1px;
+   background-color: red;
+   width: 20px;
+}
+
+
+#status{
+    border-style: solid;
+    border-width: medium;
+    height: 100px;
+}
+#amount{
+    float: inherit
+}
+#max{
+  font-weight: bold;
+  font-size: 20px;
+}
+#sub{
+  float: right;
+  margin-top: 80px;
+  padding-top: 10px;
+}
+#submit{
+  margin-top: 10px;
+  padding-top: 10px;
+}
+#Please{
+  font-weight: bold;
+  font-size: 18px;
 }

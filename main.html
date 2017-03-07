@@ -5,6 +5,9 @@
     <title></title>
 
     <link href="css/main.css" type="text/css" rel="stylesheet">
+
+    <script src ="js/jquery-3.1.1.min.js"></script>
+    <script src="js/main.js"></script>
   </head>
   <body>
 
@@ -15,6 +18,45 @@
           <span class="bank">Banker</span>
 
           <!-- left content here -->
+
+          <div id="S_sub1">
+          <p id="S_para1">Enter the amount of cash to be deposited</p>
+          <input type="textbox" placeholder="2000"/ id="S_text1">2000<br>
+          <input type="textbox" placeholder="500"/ id="S_text2">500<br>
+          <input type="textbox" placeholder="100"/ id="S_text3">100<br>
+          <br>
+          <button placeholder="2000"/ id="S_buttonAdd">Add</button><br>
+
+          <br>
+          Max Limit:-<input type="textbox" placeholder="current amount"/ id="S_text5">
+          <button id="S_buttonSubmit">submit</button>
+          <br>
+
+      </div>
+      <div id="S_sub2">
+          current amount:-<input type="textbox" placeholder="current amount"/ id="S_text4">
+
+          <table>
+              <tr><th>Amount Requested</th>
+                  <th>2000</th>
+                  <th>500</th>
+                  <th>100</th>
+                  <th>amount left</th>
+                  <th>credit/debit</th>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                   <td></td>
+              </tr>
+          </table>
+          <div id="colorGreen"> </div>deposited
+          <div id="colorRed"> red</div>withdrawn
+      </div>
+
 
         </div>
 
@@ -28,6 +70,27 @@
           <span class="cust">Customer</span>
 
           <!-- right content here-->
+
+          <ul style="list-style: none;">
+            <li id="max">
+                  Maximum Limit :- <label>Rs. 1000</label>
+            </li>
+            <li id="Please">
+              Please Enter amount in multiples of 100 only
+            </li>
+            <li>Enter Amount
+              <input type="number" id="amount" min="0" onblur="validateAmount()">
+            </li>
+            <li id="submit">
+               <input type="submit" id="sub">
+            </li>
+            <li>
+              <h3>Status :</h3>
+              <h3 id="status"></h3>
+            </li>
+          </ul>
+
+
 
         </div>
 
