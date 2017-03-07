@@ -28,6 +28,7 @@
   text-transform: uppercase;
   display: block;
   text-align: center;
+  font-weight: bold;
 }
 
 .cust
@@ -36,6 +37,8 @@
   text-transform: uppercase;
   display: inline-block;
   text-align: center;
+  margin-left: 108px;
+  font-weight: bold;
 }
 
 .line
@@ -44,7 +47,7 @@
   background-color: black;
   height: 50px;
   float: left;
-  height: 300px;
+  height: 315px;
 }
 
 
@@ -130,9 +133,34 @@ input[type="text"]{
 
 .value
 {
-  margin-left: 5px;
+  margin-left:10px;
+  font-size: 22px;
+  color: red;
 }
 
+.amou{
+  float: right;
+  margin-right: 10px
+}
+
+#S_buttonSubmit{
+  float: right;
+  clear: both;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+
+#S_sub2{
+  float: left;
+  clear: both;
+}
+
+.curr{
+  float: right;
+  margin-right: 10px;
+  margin-left: 149px;
+}
 
 
 tr th

@@ -28,14 +28,19 @@
           <button placeholder="2000"/ id="S_buttonAdd" onclick="Add()" >Add</button><br>
 
           <br>
-          Max Limit:-<input type="textbox" placeholder="current amount"/ id="S_text5">
+          Max Limit:-
+        <span class="amou">
+            <input type="textbox" placeholder="MAX LIMIT"/ id="S_text5">
+        </span><br/>
           <button id="S_buttonSubmit" onclick="maxLimit()">submit</button>
           <br>
 
       </div>
       <div id="S_sub2">
-          current amount:-<input type="textbox" placeholder="current amount"/ id="S_text4">
-
+          <span class="current">Current Amount:-</span>
+          <span class="curr">
+            <input type="textbox" placeholder="CURRENT AMOUNT"/ id="S_text4" style="margin-top:5px;">
+          </span>
 
           <!-- <table id="logsTable">
               <tr><th>Amount Requested</th>
@@ -96,7 +101,7 @@
 
       <div class="logs">
         <table id="logsTable">
-          
+
 
             <tr><th>Amount Requested</th>
                 <th>2000</th>
