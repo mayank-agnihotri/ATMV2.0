@@ -25,18 +25,19 @@
           <input type="textbox" placeholder="500" id="S_text2"><span class="value">500</span><br>
           <input type="textbox" placeholder="100" id="S_text3"><span class="value">100</span><br>
           <br>
-          <button placeholder="2000"/ id="S_buttonAdd">Add</button><br>
+          <button placeholder="2000"/ id="S_buttonAdd" onclick="Add()" >Add</button><br>
 
           <br>
           Max Limit:-<input type="textbox" placeholder="current amount"/ id="S_text5">
-          <button id="S_buttonSubmit">submit</button>
+          <button id="S_buttonSubmit" onclick="maxLimit()">submit</button>
           <br>
 
       </div>
       <div id="S_sub2">
           current amount:-<input type="textbox" placeholder="current amount"/ id="S_text4">
 
-          <table>
+
+          <table id="logsTable">
               <tr><th>Amount Requested</th>
                   <th>2000</th>
                   <th>500</th>
@@ -44,17 +45,9 @@
                   <th>amount left</th>
                   <th>credit/debit</th>
               </tr>
-              <tr>
-                  <td>Debit</td>
-                  <td>10</td>
-                  <td>5</td>
-                  <td>7</td>
-                  <td>8</td>
-                   <td>2400</td>
-              </tr>
+
           </table>
-          <div id="colorGreen"> </div>deposited
-          <div id="colorRed"> red</div>withdrawn
+
       </div>
 
 
@@ -73,7 +66,7 @@
 
           <ul style="list-style: none;">
             <li id="max">
-                  Maximum Limit :- <span id="maxLim">Rs. 1000</label>
+                   Maximum Limit :- Rs. <span id="maxLim">1000</span>
             </li>
             <li id="Please">
               Please Enter amount in multiples of 100 only
@@ -95,17 +88,9 @@
 
           </div>
 
-
-
         </div>
 
-
-
-
-
     </div>
-
-
 
   </body>
 </html>
