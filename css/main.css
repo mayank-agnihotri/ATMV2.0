@@ -10,7 +10,7 @@ body {
 
 
 .components {
-  height: 300px;
+  height: 320px;
   padding-top: 10%;
   padding-bottom: 2%;
 }
@@ -19,7 +19,7 @@ body {
   float: left;
   width: 45%;
   border: 1px solid #12335e;
-  padding: 9px;
+  padding: 0px;
   color: #FA1A35;
   padding-left: 4%;
 }
@@ -28,7 +28,10 @@ body {
   float: right;
   width: 45%;
   border: 1px solid #12335e;
-  padding: 15px;
+  padding-left: 21px;
+  padding-right: 21px;
+  padding-bottom: 21px;
+  height: 320px;
   color: #FA1A35;
 }
 

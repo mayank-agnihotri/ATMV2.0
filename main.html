@@ -31,6 +31,10 @@
                         <td><input type="number" onkeypress="return isNumberKey(event)" onkeyup="this.value = minmax(this.value, 0, 1000)" placeholder="100" id="S_text3" min="0"></td>
                         <td><span class="value">100</span><br></td>
                      </tr>
+                     <tr>
+                     <td><input type="number" onkeypress="return isNumberKey(event)" onkeyup="this.value = minmax(this.value, 0, 1000)" placeholder="50" id="S_text4" min="0"  ></td>
+                     <td><span class="value">50</span><br></td>
+                   </tr>
                   </table>
                   <button placeholder="2000"/ id="S_buttonAdd" onclick="Add(); Clear2();" >Add</button><br>
                   <br>
@@ -44,7 +48,7 @@
                <div id="S_sub2">
                   <span class="current">Current Amount:-</span>
                   <span class="curr">
-                  <span id="S_text4" style="margin-top:5px;"> </span>
+                  <span id="S_text6" style="margin-top:5px;"> </span>
                   </span>
                </div>
             </div>
@@ -57,7 +61,7 @@
                   </li>
                   <hr />
                   <li id="Please">
-                     Please Enter amount in multiples of 100 only
+                     Please Enter amount in multiples of 50 only
                   </li>
                   <li>
                      &nbsp;
@@ -85,6 +89,7 @@
                   <th>2000</th>
                   <th>500</th>
                   <th>100</th>
+                  <th>50</th>
                   <th>amount left</th>
                   <th>credit/debit</th>
                </tr>
