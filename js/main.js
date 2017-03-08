@@ -123,7 +123,7 @@ function maxLimit() {
     window.bank.Max_limit = max;
     console.log(max)
     $("#maxLim").text(max);
-
+    Clear2();
 }
 
 function common(bank, log) {
@@ -193,4 +193,15 @@ function withdraw() {
             document.getElementById('status').value = "Amount different than Currency notes Combination ";
           }
     }
+}
+
+function Clear1() {
+   document.getElementById('amount').value= "";
+}
+
+function Clear2() {
+  console.log("clear2");
+   document.getElementById('S_text1').value= "";
+   document.getElementById('S_text2').value= "";
+   document.getElementById('S_text3').value= "";
 }
