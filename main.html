@@ -12,8 +12,11 @@
   <body>
 
     <div class="maincomponent">
-
+      <div class="header">
+      <h1>ATM SIMULATOR</h1>
+       </div>
       <div class="components">
+
         <div class="banker">
           <span class="bank">Banker</span>
 
@@ -21,16 +24,26 @@
 
           <div id="S_sub1">
           <p id="S_para1">Enter the amount of cash to be deposited</p>
-          <input type="textbox" placeholder="2000" id="S_text1"><span class="value">2000</span><br>
-          <input type="textbox" placeholder="500" id="S_text2"><span class="value">500</span><br>
-          <input type="textbox" placeholder="100" id="S_text3"><span class="value">100</span><br>
-          <br>
-          <button placeholder="2000"/ id="S_buttonAdd" onclick="Add()" >Add</button><br>
+          <table>
+            <tr>
+              <td><input type="number" placeholder="2000" id="S_text1" value="0" ></td>
+              <td><span class="value">2000</span><br></td>
+            </tr>
+            <tr>
+              <td><input type="number" placeholder="500" id="S_text2" value="0" ></td>
+              <td><span class="value">500</span><br></td>
+            </tr>
+            <tr>
+              <td><input type="number" placeholder="100" id="S_text3" value="0" ></td>
+              <td><span class="value">100</span><br></td>
+            </tr>
+          </table>
+                    <button placeholder="2000"/ id="S_buttonAdd" onclick="Add()" >Add</button><br>
 
           <br>
           Max Limit:-
         <span class="amou">
-            <input type="textbox" placeholder="MAX LIMIT"/ id="S_text5">
+            <input type="textbox" placeholder="MAX LIMIT"/ id="S_text5" color = #858BDE;>
         </span><br/>
           <button id="S_buttonSubmit" onclick="maxLimit()">submit</button>
           <br>
@@ -60,9 +73,6 @@
         </div>
 
 
-        <div class="line">
-
-        </div>
 
 
         <div class="customer">
@@ -74,13 +84,19 @@
             <li id="max">
                    Maximum Limit :- Rs <span id="maxLim">1000</span>
             </li>
+            <hr />
             <li id="Please">
               Please Enter amount in multiples of 100 only
+            </li>
+            <li>
+                &nbsp;
             </li>
             <li>Enter Amount
               <input type="number" id="amount" min="0" onblur="validateAmount()">
             </li>
-
+            <li>
+                &nbsp;
+            </li>
             <div class="subm">
               <input type="submit" class="submit" value="SUBMIT" onclick="withdraw()">
             </div>

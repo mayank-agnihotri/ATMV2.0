@@ -1,3 +1,8 @@
+body
+{
+  background-color: #EAE2E3;
+
+}
 .maincomponent
 {
   margin:0 auto;
@@ -8,19 +13,30 @@
 .components
 {
   height: 300px;
+  padding-top: 10%;
+  padding-bottom: 2%;
+
 }
 
 .banker
 {
   float: left;
   width: 45%;
+  border: 1px solid #12335e;
+  padding: 9px;
+  color: #FA1A35;
+  padding-left: 4%;
+
 }
 
 .customer
 {
   float: right;
-  width: 54%;
-}
+  width: 45%;
+  border: 1px solid #12335e;
+  padding: 15px;
+  color: #FA1A35;
+  }
 
 .bank
 {
@@ -41,19 +57,13 @@
   font-weight: bold;
 }
 
-.line
-{
-  width:2px;
-  background-color: black;
-  height: 50px;
-  float: left;
-  height: 315px;
-}
 
 
 
 table, th, td {
    border: 1px solid black;
+   color: #FA1A35;
+   border: none;
 }
 
 #colorGreen{
@@ -72,10 +82,11 @@ table, th, td {
 
 
 #status{
-    border-style: solid;
-    border-width: medium;
+    border: none;
     height: 45px;
-    width: 401px;
+    width: 355px;
+    background-color: #BDB9AA;
+    color: #FA1A35;
 }
 #amount{
     float: inherit
@@ -96,8 +107,9 @@ table, th, td {
   margin: 0
 }
 
-#subm
+.subm
 {
+  margin-right: 15%;
   float:right;
 }
 
@@ -114,7 +126,7 @@ table{
 
 .status{
   margin-left: 30px;
-  margin-top: 85px;
+  margin-top: 11%;
 }
 
 label
@@ -128,25 +140,28 @@ input[type="text"]{
   width: 300px;
   border: 2px solid black;
   disable:false;
+  color: #FA1A35;
+
 }
 
 
 .value
 {
-  margin-left:10px;
+  margin-left:200px;
   font-size: 22px;
   color: red;
+  float: right;
 }
 
 .amou{
   float: right;
-  margin-right: 10px
+  margin-right: 40px
 }
 
 #S_buttonSubmit{
   float: right;
   clear: both;
-  margin-right: 10px;
+  margin-right: 40px;
   margin-top: 10px;
 }
 
@@ -158,8 +173,8 @@ input[type="text"]{
 
 .curr{
   float: right;
-  margin-right: 10px;
-  margin-left: 149px;
+  margin-right: 20px;
+  margin-left: 137px;
 }
 
 
@@ -167,3 +182,25 @@ tr th
 {
   width: 250px;
 }
+
+
+
+
+
+.header {
+  margin-left: 10px;
+  margin-right: 10px;
+  position:absolute;
+  left:0; right:0;
+  height: 10%;
+  padding-bottom: 2%;
+  color: #FA1A35;
+  text-align : center;
+  }
+
+#logsTable{
+text-align : center;
+
+}
+
+
