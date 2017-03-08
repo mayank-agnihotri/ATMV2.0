@@ -22,6 +22,8 @@ body {
   padding: 0px;
   color: #FA1A35;
   padding-left: 4%;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .customer {
@@ -30,7 +32,8 @@ body {
   border: 1px solid #12335e;
   padding-left: 21px;
   padding-right: 21px;
-  padding-bottom: 21px;
+  padding-bottom:35px;
+  padding-top: 25px;
   height: 320px;
   color: #FA1A35;
 }
@@ -58,6 +61,7 @@ table, th, td {
    border: none;
 }
 
+
 #colorGreen {
    border: 1px;
    background-color: green;
@@ -80,7 +84,9 @@ table, th, td {
 }
 
 #amount {
-    float: inherit
+    float: right;
+
+    margin-right: 13%;
 }
 
 #max {
@@ -98,12 +104,15 @@ table, th, td {
   margin-top: 10px;
   padding-top: 10px;
   float: right;
-  margin: 0
 }
 
 .subm {
   margin-right: 15%;
   float:right;
+}
+
+#withdrawButton {
+  color: #FA1A35;
 }
 
 #Please {
@@ -118,7 +127,7 @@ table {
 
 .status {
   margin-left: 30px;
-  margin-top: 11%;
+  margin-top: 7%;
 padding-left:10px;
 }
 
@@ -146,7 +155,10 @@ label {
   clear: both;
   margin-right: 40px;
   margin-top: 10px;
+
 }
+
+
 
 #S_sub2 {
   float: left;
@@ -178,17 +190,23 @@ tr th {
 text-align : center;
 }
 
+.logs{
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
 .footer {
   position: fixed;
    left:0;
    bottom:0;
    height:30px;
    width:100%;
-   background:black;
+   background:#EAE2E3;
+    margin-top: 15px;
 }
 
 .foo {
-  color: white;
+  color: #FA1A35;
   font-size: 25px;
   padding-left: 5px;
   float: left;
@@ -196,7 +214,7 @@ text-align : center;
 
 .cop {
     float: right;
-    color: white;
+    color: #FA1A35;
     font-size: 25px;
     padding-right: 5px;
 }

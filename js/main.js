@@ -73,33 +73,35 @@ function Logs(Amount, Notes_2000, Notes_500, Notes_100,Notes_50, Left_Amount, Op
         var cell5 = row.insertCell(5);
         var cell6 = row.insertCell(6);
         cell0.innerHTML=this.Amount;
-       cell1.innerHTML=this.Notes_2000;
-       cell2.innerHTML=this.Notes_500;
+        cell1.innerHTML=this.Notes_2000;
+        cell2.innerHTML=this.Notes_500;
         cell3.innerHTML=this.Notes_100;
-          cell4.innerHTML=this.Notes_50;
+        cell4.innerHTML=this.Notes_50;
         cell5.innerHTML=this.Left_amount;
         cell6.innerHTML=this.Operation;
           if(this.Operation=="Debit"){
-              cell0.className="col"
-                 cell1.className="col"
-                  cell2.className="col"
-                 cell3.className="col"
-              cell4.className="col"
-                 cell5.className="col"
-                 cell6.className="col"
+              cell0.className="col";
+              cell1.className="col";
+              cell2.className="col";
+              cell3.className="col";
+              cell4.className="col";
+              cell5.className="col";
+              cell6.className="col";
           }
           if(this.Operation=="Credit"){
-
-              cell0.className="col2"
-                 cell1.className="col2"
-                  cell2.className="col2"
-                 cell3.className="col2"
-              cell4.className="col2"
-
-             cell5.className="col2"
-                         cell6.className="col2"
+              cell0.className="col2";
+              cell1.className="col2";
+              cell2.className="col2";
+              cell3.className="col2";
+              cell4.className="col2";
+              cell5.className="col2";
+              cell6.className="col2";
          }
+
           }
+          setTimeout(function() {
+            window.scrollTo(0, document.body.scrollHeight);
+          }, 0);
 }
 
 function Add() {
@@ -120,10 +122,10 @@ function Add() {
               Notes_50=0;
           }
         var Amount = Notes_2000 * 2000 + Notes_500 * 500 + Notes_100 * 100 + Notes_50*50;
-        var bankers = new Banker(Notes_2000, Notes_500, Notes_100,Notes_50, Amount)
+        var bankers = new Banker(Notes_2000, Notes_500, Notes_100,Notes_50, Amount,1000)
         var logs = new Logs(Amount, Notes_2000, Notes_500, Notes_100,Notes_50, Amount, "Credit")
         logs.appRow();
-        document.getElementById("S_text4").innerHTML = Amount;
+        document.getElementById("S_text6").innerHTML = Amount;
         $("#S_buttonAdd").attr("disabled", true)
         $("#S_buttonSubmit").attr("disabled", false);
         window.bank = bankers;
@@ -173,47 +175,43 @@ function withdraw() {
 
     } else {
 
-      console.log(value)
-var temp=parseInt(value / 2000);
-console.log(temp>log.Notes_2000)
-   var Notes_2000Req= temp<log.Notes_2000?temp:log.Notes_2000;
+    console.log(value)
+    var temp=parseInt(value / 2000);
+    console.log(temp>log.Notes_2000)
+    var Notes_2000Req= temp<log.Notes_2000?temp:log.Notes_2000;
     console.log(Notes_2000Req);
-var rem=value-Notes_2000Req*2000;
-console.log(rem)
-temp=parseInt(rem/500);
-var Notes_500Req=temp<log.Notes_500?temp:log.Notes_500;
-rem=rem-Notes_500Req*500;
+    var rem=value-Notes_2000Req*2000;
+    console.log(rem)
+    temp=parseInt(rem/500);
+    var Notes_500Req=temp<log.Notes_500?temp:log.Notes_500;
+    rem=rem-Notes_500Req*500;
     temp=parseInt(rem/100);
-   console.log(rem);
-var Notes_100req=temp<log.Notes_100?temp:log.Notes_100;
-   rem=rem-Notes_100req*100;
-   temp=parseInt(rem/50);
-   console.log(rem);
-   var Notes_50req=temp<log.Notes_50?temp:log.Notes_50;
-console.log(Notes_2000Req+" "+Notes_500Req+" "+ Notes_100req+" "+Notes_50req)
-
-if(Notes_2000Req<=logs.Notes_2000&&Notes_500Req<=logs.Notes_500&&Notes_100req<=logs.Notes_100&&Notes_50req<=logs.Notes_50){
-
-   console.log( window.logs.Left_amount)
- document.getElementById('status').value = "Withraw Amount Successfully";
-
-var    leftAmount=log.Left_amount-value;
-var Notes2000=log.Notes_2000-Notes_2000Req;
-var Notes500=log.Notes_500-Notes_500Req;
-var Notes100=log.Notes_100-Notes_100req;
-   var Notes50= log.Notes_50-Notes_50req;
-window.logs.Left_amount=leftAmount
-var LOG=new Logs(value,Notes2000,Notes500,Notes100,Notes50,leftAmount,"Debit")
+    console.log(rem);
+    var Notes_100req=temp<log.Notes_100?temp:log.Notes_100;
+    rem=rem-Notes_100req*100;
+    var Notes_50req=parseInt(rem/50);
+    console.log(Notes_2000Req+" "+Notes_500Req+" "+ Notes_100req+" "+Notes_50req)
+    console.log(Notes_2000Req+" "+Notes_500Req+" "+ Notes_100req+" "+Notes_50req)
+    if(Notes_2000Req<=logs.Notes_2000&&Notes_500Req<=logs.Notes_500&&Notes_100req<=logs.Notes_100&&Notes_50req<=logs.Notes_50){
+      console.log( window.logs.Left_amount)
+      document.getElementById('status').value = "Withraw Amount Successfully";
+      var leftAmount=log.Left_amount-value;
+      var Notes2000=log.Notes_2000-Notes_2000Req;
+      var Notes500=log.Notes_500-Notes_500Req;
+      var Notes100=log.Notes_100-Notes_100req;
+      var Notes50= log.Notes_50-Notes_50req;
+      window.logs.Left_amount=leftAmount
+      var LOG=new Logs(value,Notes2000,Notes500,Notes100,Notes50,leftAmount,"Debit")
 
 
-LOG.appRow();
-    document.getElementById("S_text6").innerHTML=LOG.Left_amount;
-window.logs=LOG;
-   console.log(LOG)
+      LOG.appRow();
+      document.getElementById("S_text6").innerHTML=LOG.Left_amount;
+      window.logs=LOG;
+      console.log(LOG)
 
 
-console.log(window.bank)
-  }
+      console.log(window.bank)
+    }
    else
    document.getElementById('status').value = "Amount different than Currency notes Combination ";
 
@@ -231,4 +229,5 @@ function Clear2() {
    document.getElementById('S_text1').value= "";
    document.getElementById('S_text2').value= "";
    document.getElementById('S_text3').value= "";
+    document.getElementById('S_text4').value= "";
 }

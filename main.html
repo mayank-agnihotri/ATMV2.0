@@ -60,25 +60,30 @@
                      Maximum Limit :- Rs <span id="maxLim">1000</span>
                   </li>
                   <hr />
+                  <li>
+                     &nbsp;
+                  </li>
                   <li id="Please">
-                     Please Enter amount in multiples of 50 only
+                     Please Enter amount in multiples of 50/100 only <br/>
+                     Despense will be done according to availability of notes.
+                   </br/>
                   </li>
                   <li>
                      &nbsp;
                   </li>
                   <li>Enter Amount
-                     <input type="number" id="amount" min="0" onblur="validateAmount()" onkeypress="return isNumberKey(event)">
+                     <input type="number" placeholder="Enter Amount" id="amount" min="0" onblur="validateAmount()" onkeypress="return isNumberKey(event)">
                   </li>
                   <li>
                      &nbsp;
                   </li>
                   <div class="subm">
-                     <input type="submit" class="submit" value="SUBMIT" onclick="withdraw(); Clear1();">
+                     <input type="submit" class="submit" value="SUBMIT" id="withdrawButton" onclick="withdraw();"></input>
                   </div>
                </ul>
                <div class="status">
                   <label>STATUS</label>
-                  <input type="text" id="status">
+                  <input type="text" id="status" DISABLED></input>
                </div>
             </div>
          </div>
@@ -95,15 +100,16 @@
                </tr>
             </table>
          </div>
+         <div class="footer">
+            <span class="foo">
+            TO THE NEW
+            </span>
+            <span class="cop">
+            &copy; Bootcamp - 2017/JAVASCRIPT
+            </span>
+         </div>
       </div>
       <!-- footer -->
-      <div class="footer">
-         <span class="foo">
-         TO THE NEW
-         </span>
-         <span class="cop">
-         &copy; Bootcamp - 2017/JAVASCRIPT
-         </span>
-      </div>
+
    </body>
 </html>
