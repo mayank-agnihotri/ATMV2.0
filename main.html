@@ -43,7 +43,7 @@
           <br>
           Max Limit:-
         <span class="amou">
-            <input type="textbox"  onkeypress="return isNumberKey(event)" placeholder="MAX LIMIT"/ id="S_text5" color = #858BDE; >
+            <input type="textbox" onblur="validatemaxlimit()" onkeypress="return isNumberKey(event)" placeholder="MAX LIMIT"/ id="S_text5" color = #858BDE; >
         </span><br/>
           <button id="S_buttonSubmit" onclick="maxLimit()">submit</button>
           <br>

@@ -1,45 +1,38 @@
-body
-{
+body {
   background-color: #EAE2E3;
-
 }
-.maincomponent
-{
+
+
+.maincomponent {
   margin:0 auto;
   width:1000px;
 }
 
 
-.components
-{
+.components {
   height: 300px;
   padding-top: 10%;
   padding-bottom: 2%;
-
 }
 
-.banker
-{
+.banker {
   float: left;
   width: 45%;
   border: 1px solid #12335e;
   padding: 9px;
   color: #FA1A35;
   padding-left: 4%;
-
 }
 
-.customer
-{
+.customer {
   float: right;
   width: 45%;
   border: 1px solid #12335e;
   padding: 15px;
   color: #FA1A35;
-  }
+}
 
-.bank
-{
+.bank {
   font-size: 40px;;
   text-transform: uppercase;
   display: block;
@@ -47,8 +40,7 @@ body
   font-weight: bold;
 }
 
-.cust
-{
+.cust {
   font-size: 40px;
   text-transform: uppercase;
   display: inline-block;
@@ -57,135 +49,119 @@ body
   font-weight: bold;
 }
 
-
-
-
 table, th, td {
    border: 1px solid black;
    color: #FA1A35;
    border: none;
 }
 
-#colorGreen{
+#colorGreen {
    border: 1px;
    background-color: green;
    width: 20px;
-
-
 }
 
-#colorRed{
+#colorRed {
    border:1px;
    background-color: red;
    width: 20px;
 }
 
-
-#status{
+#status {
     border: none;
     height: 45px;
     width: 355px;
     background-color: #BDB9AA;
     color: #FA1A35;
 }
-#amount{
+
+#amount {
     float: inherit
 }
-#max{
+
+#max {
   font-weight: bold;
   font-size: 20px;
 }
-#sub{
+
+#sub {
   float: right;
   margin-top: 80px;
   padding-top: 10px;
 }
-#submit{
+
+#submit {
   margin-top: 10px;
   padding-top: 10px;
   float: right;
   margin: 0
 }
 
-.subm
-{
+.subm {
   margin-right: 15%;
   float:right;
 }
 
-#Please{
+#Please {
   font-weight: bold;
   font-size: 18px;
 }
 
-
-table{
+table {
   margin-top: 20px;
 }
 
-
-.status{
+.status {
   margin-left: 30px;
   margin-top: 11%;
 }
 
-label
-{
+label {
   display: block;
 }
 
 
-input[type="text"]{
+input[type="text"] {
   height: 25px;
   width: 300px;
   border: 2px solid black;
   disable:false;
   color: #FA1A35;
-
 }
 
-
-.value
-{
+.value {
   margin-left:200px;
   font-size: 22px;
   color: red;
   float: right;
 }
 
-.amou{
+.amou {
   float: right;
   margin-right: 40px
 }
 
-#S_buttonSubmit{
+#S_buttonSubmit {
   float: right;
   clear: both;
   margin-right: 40px;
   margin-top: 10px;
 }
 
-
-#S_sub2{
+#S_sub2 {
   float: left;
   clear: both;
 }
 
-.curr{
+.curr {
   float: right;
   margin-right: 20px;
   margin-left: 137px;
 }
 
-
-tr th
-{
+tr th {
   width: 250px;
 }
-
-
-
-
 
 .header {
   margin-left: 10px;
@@ -198,12 +174,11 @@ tr th
   text-align : center;
   }
 
-#logsTable{
+#logsTable {
 text-align : center;
-
 }
 
-.footer{
+.footer {
   position: fixed;
    left:0;
    bottom:0;
@@ -212,20 +187,16 @@ text-align : center;
    background:black;
 }
 
-
-.foo{
+.foo {
   color: white;
   font-size: 25px;
   padding-left: 5px;
   float: left;
-
 }
 
-.cop{
+.cop {
     float: right;
     color: white;
     font-size: 25px;
     padding-right: 5px;
 }
-
-
