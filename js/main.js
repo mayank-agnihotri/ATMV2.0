@@ -27,6 +27,15 @@ function isNumberKey(evt) {
     return true;
 }
 
+function minmax(value, min, max) 
+{
+    if(parseInt(value) < min || isNaN(parseInt(value))) 
+        return ""; 
+    else if(parseInt(value) > max) 
+        return 1000; 
+    else return value;
+}
+
 function validateAmount() {
 
     var amount = $("#amount").val();
