@@ -203,4 +203,29 @@ text-align : center;
 
 }
 
+.footer{
+  position: fixed;
+   left:0;
+   bottom:0;
+   height:30px;
+   width:100%;
+   background:black;
+}
+
+
+.foo{
+  color: white;
+  font-size: 25px;
+  padding-left: 5px;
+  float: left;
+
+}
+
+.cop{
+    float: right;
+    color: white;
+    font-size: 25px;
+    padding-right: 5px;
+}
+
 
