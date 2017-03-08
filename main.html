@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
    <head>
       <meta charset="utf-8">
       <title></title>
@@ -93,65 +92,6 @@
             <table id="logsTable">
                <tr>
                   <th>Amount Requested</th>
-=======
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-
-    <link href="css/main.css" type="text/css" rel="stylesheet">
-
-    <script src ="js/jquery-3.1.1.min.js"></script>
-    <script src="js/main.js"></script>
-  </head>
-  <body>
-
-    <div class="maincomponent">
-      <div class="header">
-      <h1>ATM SIMULATOR</h1>
-       </div>
-      <div class="components">
-
-        <div class="banker">
-          <span class="bank">Banker</span>
-
-          <!-- left content here -->
-
-          <div id="S_sub1">
-          <p id="S_para1">Enter the amount of cash to be deposited</p>
-          <table>
-            <tr>
-              <td><input type="number" onkeypress="return isNumberKey(event)" onkeyup="this.value = minmax(this.value, 0, 1000)" placeholder="2000" id="S_text1" value="0" ></td>
-              <td><span class="value">2000</span><br></td>
-            </tr>
-            <tr>
-              <td><input type="number" onkeypress="return isNumberKey(event)" onkeyup="this.value = minmax(this.value, 0, 1000)" placeholder="500" id="S_text2" value="0" ></td>
-              <td><span class="value">500</span><br></td>
-            </tr>
-            <tr>
-              <td><input type="number" onkeypress="return isNumberKey(event)" onkeyup="this.value = minmax(this.value, 0, 1000)" placeholder="100" id="S_text3" value="0" ></td>
-              <td><span class="value">100</span><br></td>
-            </tr>
-          </table>
-                    <button placeholder="2000"/ id="S_buttonAdd" onclick="Add()" >Add</button><br>
-
-          <br>
-          Max Limit:-
-        <span class="amou">
-            <input type="textbox" onblur="validatemaxlimit()" onkeypress="return isNumberKey(event)" placeholder="MAX LIMIT"/ id="S_text5" color = #858BDE; >
-        </span><br/>
-          <button id="S_buttonSubmit" onclick="maxLimit()">submit</button>
-          <br>
-
-      </div>
-      <div id="S_sub2">
-          <span class="current">Current Amount:-</span>
-          <span class="curr">
-            <input type="textbox" placeholder="CURRENT AMOUNT"/ id="S_text4" style="margin-top:5px;">
-          </span>
-
-          <!-- <table id="logsTable">
-              <tr><th>Amount Requested</th>
->>>>>>> 51320bd9f85d0bd024571df731a58e063ce8bf8c
                   <th>2000</th>
                   <th>500</th>
                   <th>100</th>
