@@ -73,6 +73,7 @@ table, th, td {
     width: 355px;
     background-color: #BDB9AA;
     color: #FA1A35;
+	padding-left : 2px;
 }
 
 #amount {
@@ -109,11 +110,13 @@ table, th, td {
 
 table {
   margin-top: 20px;
+  border-collapse: collapse;
 }
 
 .status {
   margin-left: 30px;
   margin-top: 11%;
+padding-left:10px;
 }
 
 label {
@@ -121,13 +124,7 @@ label {
 }
 
 
-input[type="text"] {
-  height: 25px;
-  width: 300px;
-  border: 2px solid black;
-  disable:false;
-  color: #FA1A35;
-}
+
 
 .value {
   margin-left:200px;
@@ -199,4 +196,14 @@ text-align : center;
     color: white;
     font-size: 25px;
     padding-right: 5px;
+}
+
+
+.col {
+   background-color: lightcoral;
+   color: black;
+}
+.col2 {
+   background-color: aqua;
+  color: black;
 }

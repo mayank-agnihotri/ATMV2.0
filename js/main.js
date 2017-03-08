@@ -1,23 +1,7 @@
-function validateField() {
-    var a = parseInt($("#S_text1").val())
-    var b = parseInt($("#S_text2").val())
-    var c = parseInt($("#S_text3").val())
-    if ($("#S_text1").val() == "") {
-        a = 0
-    }
-    if ($("#S_text2").val() == "") {
-        b = 0;
-    }
-    if ($("#S_text3").val() == "") {
-        c = 0;
-    }
-    console.log(a + " " + b + " " + c)
-    if ((a < 0) || (a > 1000) || (b < 0) || (b > 1000) || (c < 0) || (c > 1000)) {
-        return false;
-    } else {
-        return true;
-    }
-}
+$( document ).ready(function() {
+  $("#S_buttonSubmit").attr("disabled", true);
+})
+
 
 function isNumberKey(evt) {
     var charCode = (evt.which) ? evt.which : event.keyCode
@@ -27,12 +11,12 @@ function isNumberKey(evt) {
     return true;
 }
 
-function minmax(value, min, max) 
+function minmax(value, min, max)
 {
-    if(parseInt(value) < min || isNaN(parseInt(value))) 
-        return ""; 
-    else if(parseInt(value) > max) 
-        return 1000; 
+    if(parseInt(value) < min || isNaN(parseInt(value)))
+        return "";
+    else if(parseInt(value) > max)
+        return 1000;
     else return value;
 }
 
@@ -91,29 +75,51 @@ function Logs(Amount, Notes_2000, Notes_500, Notes_100, Left_Amount, Operation) 
         cell3.innerHTML = this.Notes_100;
         cell4.innerHTML = this.Left_amount;
         cell5.innerHTML = this.Operation;
+        if(this.Operation=="Debit"){
+        cell0.className="col"
+           cell1.className="col"
+            cell2.className="col"
+           cell3.className="col"
+        cell4.className="col"
+           cell5.className="col"
+       }
+        if(this.Operation=="Credit"){
+
+            cell0.className="col2"
+               cell1.className="col2"
+                cell2.className="col2"
+               cell3.className="col2"
+            cell4.className="col2"
+
+           cell5.className="col2"
+   }
     }
 }
 
 function Add() {
-    if (validateField()) {
-        var Notes_2000 = $("#S_text1").val();
-        var Notes_500 = $("#S_text2").val();
-        var Notes_100 = $("#S_text3").val();
-        //if(!((Notes_2000="")||(Notes_500="")||(Notes_100="")))
+       var Notes_2000=parseInt($("#S_text1").val());
+       var Notes_500 =parseInt($("#S_text2").val());
+       var Notes_100 =parseInt($("#S_text3").val());
+         if(isNaN(Notes_2000)){
+             Notes_2000=0;
+         }
+        if(isNaN(Notes_500)){
+             Notes_500=0;
+         }
+        if(isNaN(Notes_100)){
+             Notes_100=0;
+         }
         var Amount = Notes_2000 * 2000 + Notes_500 * 500 + Notes_100 * 100;
         var bankers = new Banker(Notes_2000, Notes_500, Notes_100, Amount)
         var logs = new Logs(Amount, Notes_2000, Notes_500, Notes_100, Amount, "Credit")
         logs.appRow();
-        document.getElementById("S_text4").value = Amount;
+        document.getElementById("S_text4").innerHTML = Amount;
         $("#S_buttonAdd").attr("disabled", true)
+        $("#S_buttonSubmit").attr("disabled", false);
         window.bank = bankers;
         window.logs = logs;
         console.log(window.bank)
-    } else {
-        alert("Enter Values Accordingly");
-        location.reload();
-    }
-}
+      }
 
 function maxLimit() {
 
