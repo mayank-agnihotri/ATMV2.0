@@ -2,12 +2,10 @@ body {
   background-color: #EAE2E3;
 }
 
-
 .maincomponent {
   margin:0 auto;
   width:1000px;
 }
-
 
 .components {
   height: 320px;
@@ -61,7 +59,6 @@ table, th, td {
    border: none;
 }
 
-
 #colorGreen {
    border: 1px;
    background-color: green;
@@ -80,12 +77,11 @@ table, th, td {
     width: 355px;
     background-color: #BDB9AA;
     color: #FA1A35;
-	padding-left : 2px;
+	  padding-left : 2px;
 }
 
 #amount {
     float: right;
-
     margin-right: 13%;
 }
 
@@ -128,15 +124,12 @@ table {
 .status {
   margin-left: 30px;
   margin-top: 7%;
-padding-left:10px;
+  padding-left:10px;
 }
 
 label {
   display: block;
 }
-
-
-
 
 .value {
   margin-left:200px;
@@ -155,10 +148,7 @@ label {
   clear: both;
   margin-right: 40px;
   margin-top: 10px;
-
 }
-
-
 
 #S_sub2 {
   float: left;
@@ -196,7 +186,7 @@ text-align : center;
 }
 
 .footer {
-  position: fixed;
+   position: fixed;
    left:0;
    bottom:0;
    height:30px;
@@ -224,7 +214,8 @@ text-align : center;
    background-color: lightcoral;
    color: black;
 }
+
 .col2 {
    background-color: aqua;
-  color: black;
+   color: black;
 }
