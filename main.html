@@ -92,7 +92,7 @@
                 &nbsp;
             </li>
             <li>Enter Amount
-              <input type="number" id="amount" min="0" onblur="validateAmount()">
+              <input type="number" id="amount" min="0" onblur="validateAmount()" onkeypress="return isNumberKey(event)">
             </li>
             <li>
                 &nbsp;
