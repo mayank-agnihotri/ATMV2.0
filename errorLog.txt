@@ -1,0 +1,13 @@
+display negative value message rather than alert-mayank
+when all fields are blank set default value zero-mayank
+decimal value not allowed in any text box-sargam
+maxium limit cannot be negative value-sunny
+maximum limit should multiple of 100-sunny
+maximum limit should not take  decimal value-sunny
+maximum limit should not take alphabet-sunny
+enter amount should be blank after display of error-mayank
+current amount should not be editable-arpit
+no special charcter anywhere-sargam
+add 50 rupee in logic-arpit
+add u.i of 50 rupee-arpit
+color on transecction-mayank
