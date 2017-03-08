@@ -1,156 +1,114 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+      <link href="css/main.css" type="text/css" rel="stylesheet">
+      <script src ="js/jquery-3.1.1.min.js"></script>
+      <script src="js/main.js"></script>
+   </head>
+   <body>
+      <div class="maincomponent">
+         <div class="header">
+            <h1>ATM SIMULATOR</h1>
+         </div>
+         <div class="components">
+            <div class="banker">
+               <span class="bank">Banker</span>
+               <!-- left content here -->
+               <div id="S_sub1">
+                  <p id="S_para1">Enter the amount of cash to be deposited</p>
+                  <table>
+                     <tr>
+                        <td><input type="number" onkeypress="return isNumberKey(event)" placeholder="2000" id="S_text1" value="0" ></td>
+                        <td><span class="value">2000</span><br></td>
+                     </tr>
+                     <tr>
+                        <td><input type="number" onkeypress="return isNumberKey(event)" placeholder="500" id="S_text2" value="0" ></td>
+                        <td><span class="value">500</span><br></td>
+                     </tr>
+                     <tr>
+                        <td><input type="number" onkeypress="return isNumberKey(event)" placeholder="100" id="S_text3" value="0" ></td>
+                        <td><span class="value">100</span><br></td>
+                     </tr>
+                  </table>
+                  <button placeholder="2000"/ id="S_buttonAdd" onclick="Add()" >Add</button><br>
+                  <br>
+                  Max Limit:-
+                  <span class="amou">
+                  <input type="textbox" onblur="validatemaxlimit()" onkeypress="return isNumberKey(event)" placeholder="MAX LIMIT"/ id="S_text5" color = #858BDE; >
+                  </span><br/>
+                  <button id="S_buttonSubmit" onclick="maxLimit()">submit</button>
+                  <br>
+               </div>
+               <div id="S_sub2">
+                  <span class="current">Current Amount:-</span>
+                  <span class="curr">
+                  <input type="textbox" placeholder="CURRENT AMOUNT"/ id="S_text4" style="margin-top:5px;">
+                  </span>
+                  <!-- <table id="logsTable">
+                     <tr><th>Amount Requested</th>
+                         <th>2000</th>
+                         <th>500</th>
+                         <th>100</th>
+                         <th>amount left</th>
+                         <th>credit/debit</th>
+                     </tr>
 
-    <link href="css/main.css" type="text/css" rel="stylesheet">
-
-    <script src ="js/jquery-3.1.1.min.js"></script>
-    <script src="js/main.js"></script>
-  </head>
-  <body>
-
-    <div class="maincomponent">
-      <div class="header">
-      <h1>ATM SIMULATOR</h1>
-       </div>
-      <div class="components">
-
-        <div class="banker">
-          <span class="bank">Banker</span>
-
-          <!-- left content here -->
-
-          <div id="S_sub1">
-          <p id="S_para1">Enter the amount of cash to be deposited</p>
-          <table>
-            <tr>
-              <td><input type="number" onkeypress="return isNumberKey(event)" placeholder="2000" id="S_text1" value="0" ></td>
-              <td><span class="value">2000</span><br></td>
-            </tr>
-            <tr>
-              <td><input type="number" onkeypress="return isNumberKey(event)" placeholder="500" id="S_text2" value="0" ></td>
-              <td><span class="value">500</span><br></td>
-            </tr>
-            <tr>
-              <td><input type="number" onkeypress="return isNumberKey(event)" placeholder="100" id="S_text3" value="0" ></td>
-              <td><span class="value">100</span><br></td>
-            </tr>
-          </table>
-                    <button placeholder="2000"/ id="S_buttonAdd" onclick="Add()" >Add</button><br>
-
-          <br>
-          Max Limit:-
-        <span class="amou">
-            <input type="textbox" onblur="validatemaxlimit()" onkeypress="return isNumberKey(event)" placeholder="MAX LIMIT"/ id="S_text5" color = #858BDE; >
-        </span><br/>
-          <button id="S_buttonSubmit" onclick="maxLimit()">submit</button>
-          <br>
-
-      </div>
-      <div id="S_sub2">
-          <span class="current">Current Amount:-</span>
-          <span class="curr">
-            <input type="textbox" placeholder="CURRENT AMOUNT"/ id="S_text4" style="margin-top:5px;">
-          </span>
-
-          <!-- <table id="logsTable">
-              <tr><th>Amount Requested</th>
+                     </table> -->
+               </div>
+            </div>
+            <div class="customer">
+               <span class="cust">Customer</span>
+               <!-- right content here-->
+               <ul style="list-style: none;">
+                  <li id="max">
+                     Maximum Limit :- Rs <span id="maxLim">1000</span>
+                  </li>
+                  <hr />
+                  <li id="Please">
+                     Please Enter amount in multiples of 100 only
+                  </li>
+                  <li>
+                     &nbsp;
+                  </li>
+                  <li>Enter Amount
+                     <input type="number" id="amount" min="0" onblur="validateAmount()" onkeypress="return isNumberKey(event)">
+                  </li>
+                  <li>
+                     &nbsp;
+                  </li>
+                  <div class="subm">
+                     <input type="submit" class="submit" value="SUBMIT" onclick="withdraw()">
+                  </div>
+               </ul>
+               <div class="status">
+                  <label>STATUS</label>
+                  <input type="text" id="status">
+               </div>
+            </div>
+         </div>
+         <div class="logs">
+            <table id="logsTable">
+               <tr>
+                  <th>Amount Requested</th>
                   <th>2000</th>
                   <th>500</th>
                   <th>100</th>
                   <th>amount left</th>
                   <th>credit/debit</th>
-              </tr>
-
-          </table> -->
-
-
+               </tr>
+            </table>
+         </div>
       </div>
-
-
-        </div>
-
-
-
-
-        <div class="customer">
-          <span class="cust">Customer</span>
-
-          <!-- right content here-->
-
-          <ul style="list-style: none;">
-            <li id="max">
-                   Maximum Limit :- Rs <span id="maxLim">1000</span>
-            </li>
-            <hr />
-            <li id="Please">
-              Please Enter amount in multiples of 100 only
-            </li>
-            <li>
-                &nbsp;
-            </li>
-            <li>Enter Amount
-              <input type="number" id="amount" min="0" onblur="validateAmount()" onkeypress="return isNumberKey(event)">
-            </li>
-            <li>
-                &nbsp;
-            </li>
-            <div class="subm">
-              <input type="submit" class="submit" value="SUBMIT" onclick="withdraw()">
-            </div>
-
-          </ul>
-
-
-          <div class="status">
-            <label>STATUS</label>
-            <input type="text" id="status">
-
-          </div>
-
-        </div>
-
+      <!-- footer -->
+      <div class="footer">
+         <span class="foo">
+         TO THE NEW
+         </span>
+         <span class="cop">
+         &copy; Bootcamp - 2017
+         </span>
       </div>
-
-
-      <div class="logs">
-        <table id="logsTable">
-
-
-            <tr><th>Amount Requested</th>
-                <th>2000</th>
-                <th>500</th>
-                <th>100</th>
-                <th>amount left</th>
-                <th>credit/debit</th>
-            </tr>
-
-        </table>
-      </div>
-
-
-
-    </div>
-
-
-	<!-- footer -->
-
-    <div class="footer">
-
-      <span class="foo">
-          TO THE NEW
-      </span>
-
-      <span class="cop">
-        &copy; Bootcamp - 2017
-      </span>
-
-    </div>
-
-
-
-
-  </body>
+   </body>
 </html>
