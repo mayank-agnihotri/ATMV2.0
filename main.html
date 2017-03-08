@@ -20,15 +20,15 @@
                   <p id="S_para1">Enter the amount of cash to be deposited</p>
                   <table>
                      <tr>
-                        <td><input type="number" onkeypress="return isNumberKey(event)" placeholder="2000" id="S_text1" value="0" ></td>
+                        <td><input type="number" onkeypress="return isNumberKey(event)" onkeyup="this.value = minmax(this.value, 0, 1000)" placeholder="2000" id="S_text1" value="0" ></td>
                         <td><span class="value">2000</span><br></td>
                      </tr>
                      <tr>
-                        <td><input type="number" onkeypress="return isNumberKey(event)" placeholder="500" id="S_text2" value="0" ></td>
+                        <td><input type="number" onkeypress="return isNumberKey(event)" onkeyup="this.value = minmax(this.value, 0, 1000)" placeholder="500" id="S_text2" value="0" ></td>
                         <td><span class="value">500</span><br></td>
                      </tr>
                      <tr>
-                        <td><input type="number" onkeypress="return isNumberKey(event)" placeholder="100" id="S_text3" value="0" ></td>
+                        <td><input type="number" onkeypress="return isNumberKey(event)" onkeyup="this.value = minmax(this.value, 0, 1000)" placeholder="100" id="S_text3" value="0" ></td>
                         <td><span class="value">100</span><br></td>
                      </tr>
                   </table>
